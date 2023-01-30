@@ -112,7 +112,7 @@ class aos {
 
 			// Recursively check innerBlocks Array
 			if ( isset( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) && ! empty( $block['innerBlocks'] ) )
-				$this->check_inner_blocks( $block );
+				$this->check_inner_blocks( $block['innerBlocks'] );
 
 		}
 
