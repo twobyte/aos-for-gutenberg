@@ -7,6 +7,10 @@
         {
           "name": "Bastian Fießinger",
           "homepage": "https://github.com/bfiessinger"
+        },
+         {
+          "name": "Toby Trembath",
+          "homepage": "https://github.com/twobyte"
         }
     ],
     "minimum-stability": "dev-master"
