@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Plugin Name: AOS Animations for Gutenberg
- * Description: Animate Gutenberg Blocks on scroll
- * Version: 1.0.0
- * Author: Bastian Fießinger
+ * Plugin Name: AOS Animations & CountUp for Gutenberg
+ * Description: Animate Gutenberg Blocks on scroll with Count Up
+ * Version: 2.0.0
+ * Author: Bastian Fießinger & Toby Trembath
  * Author URI: https://github.com/bfiessinger/
  */
 
