@@ -66,7 +66,7 @@ class aos {
 
 		wp_enqueue_script(
 			'block-aos-support',
-			gutenberg_aos_plugin_url . 'dist/js/block_editor.js',
+			gutenberg_aos_plugin_url . 'build/block-editor.js',
 			[ 
 				'wp-blocks', 
 				'wp-i18n', 
@@ -86,7 +86,7 @@ class aos {
 
 		wp_register_script( 
 			'aos',
-			gutenberg_aos_plugin_url . 'dist/js/aos.js',
+			gutenberg_aos_plugin_url . 'build/aos.js',
 			[],
 			null,
 			true
@@ -94,7 +94,7 @@ class aos {
 
 		wp_register_style(
 			'aos',
-			gutenberg_aos_plugin_url . 'dist/css/aos.css',
+			gutenberg_aos_plugin_url . 'build/aos.css',
 			[],
 			null,
 			'all'
@@ -132,14 +132,17 @@ class aos {
 	function enqueue_aos_script() {
 
 		global $post;
-		$blocks_parsed = parse_blocks( $post->post_content );
+		if(!empty($post->post_content)){
+			$blocks_parsed = parse_blocks( $post->post_content );
 
-		$this->check_inner_blocks( $blocks_parsed );
+			$this->check_inner_blocks( $blocks_parsed );
 
-		if ( $this->use_aos_for_post !== FALSE ) {
-			wp_enqueue_script( 'aos' );
-			wp_enqueue_style(	'aos' );
+			if ( $this->use_aos_for_post !== FALSE ) {
+				wp_enqueue_script( 'aos' );
+				wp_enqueue_style(	'aos' );
+			}
 		}
+
 
 	}
 

@@ -173,6 +173,10 @@ const gutenbergAOSControls = createHigherOrderComponent((BlockEdit) => {
 										{
 											label: 'Zoom Out Left',
 											value: 'zoom-out-left'
+										},
+										{
+											label: 'Count Up From Zero',
+											value: 'count-up'
 										}
 									]}
 									onChange={(gutenbergAOSAnimation) => props.setAttributes({ gutenbergAOSAnimation: gutenbergAOSAnimation })}
@@ -217,7 +221,9 @@ function gutenbergAOSApplyAttributes(extraProps, blockType, attributes) {
 		}
 
 		extraProps['data-aos'] = animationName;
-
+		if (animationName === 'count-up'){
+			extraProps['data-aos-id'] = animationName;
+		}
 	}
 
 	return extraProps;
