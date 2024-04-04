@@ -132,6 +132,7 @@ class aos {
 	function enqueue_aos_script() {
 
 		global $post;
+		if (!$post) return;
 		if(!empty($post->post_content)){
 			$blocks_parsed = parse_blocks( $post->post_content );
 
@@ -142,7 +143,6 @@ class aos {
 				wp_enqueue_style(	'aos' );
 			}
 		}
-
 
 	}
 

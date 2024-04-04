@@ -2,7 +2,7 @@
     "name": "twobyte/aos-for-gutenberg",
     "description": "AOS Animations for the WordPress Gutenberg Editor",
     "type": "wordpress-plugin",
-    "license": "GPL-3.0-or-later",
+    "license": "MIT",
     "authors": [
         {
           "name": "Bastian Fießinger",
@@ -13,5 +13,15 @@
           "homepage": "https://github.com/twobyte"
         }
     ],
-    "minimum-stability": "dev-master"
+    "minimum-stability": "dev-master",
+    "keywords": [
+        "aos",
+        "animations",
+        "gutenberg",
+        "wordpress",
+        "wordpress-plugin"
+    ],
+    "require": {
+        "php": ">=5.6"
+    }
 }
